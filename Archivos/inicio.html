@@ -33,3 +33,37 @@
 <p>En Guau&Miau creemos que cada mascota merece lo mejor, y por eso trabajamos día a día para entregar productos que cuiden de su salud, su diversión y el bienestar de quienes más queremos.</p>
 <p>Hoy queremos invitarte a unirte a nuestra comunidad.<br>👉 <a href="#registroModal" class="abrirRegistro"><strong>Regístrate</strong></a> y comienza a disfrutar de una experiencia pensada para ti y tus fieles compañeros.</p>
 </fieldset>
+
+<!-- Modal Registro -->
+<div id="registroModal" class="modal">
+<div class="modal-content registro-card">
+<a href="#" class="cerrar">&times;</a>
+<h3>Regístrate Gratis</h3>
+<form id="formRegistro">
+  <div class="mb-3"><label>Nombre</label><input type="text" class="form-control" required></div>
+  <div class="mb-3"><label>Apellido</label><input type="text" class="form-control" required></div>
+  <div class="mb-3"><label>Correo electrónico</label><input type="email" class="form-control" placeholder="usuario@duoc.cl" required></div>
+  <div class="mb-3 input-ojito">
+    <label>Contraseña</label>
+    <input type="password" id="passwordRegistro" class="form-control" required>
+    <i class="bi bi-eye-slash-fill" id="togglePassword"></i>
+  </div>
+  <div class="requisitos" id="requisitosPassword">
+    <div class="requisito" id="reqLength"><i class="bi bi-x-circle-fill"></i><span>Mínimo 8 caracteres</span></div>
+    <div class="requisito" id="reqUpper"><i class="bi bi-x-circle-fill"></i><span>Al menos una letra mayúscula</span></div>
+    <div class="requisito" id="reqLower"><i class="bi bi-x-circle-fill"></i><span>Al menos una letra minúscula</span></div>
+    <div class="requisito" id="reqNumber"><i class="bi bi-x-circle-fill"></i><span>Al menos un número</span></div>
+    <div class="requisito" id="reqSpecial"><i class="bi bi-x-circle-fill"></i><span>Al menos un carácter especial (@#$%&*!?)</span></div>
+  </div>
+  <div class="mb-3 input-ojito">
+    <label>Confirmar Contraseña</label>
+    <input type="password" id="confirmPassword" class="form-control" required>
+    <i class="bi bi-eye-slash-fill" id="toggleConfirm"></i>
+  </div>
+  <div class="mb-3 form-check"><input type="checkbox" class="form-check-input" id="terminos"><label class="form-check-label" for="terminos">Aceptar términos y condiciones</label></div>
+  <button type="submit" class="btn btn-registrar w-100">Registrar</button>
+  <button type="button" class="btn btn-entrar w-100 mt-2 abrirLogin">Entrar</button>
+</form>
+</div>
+</div>
+
