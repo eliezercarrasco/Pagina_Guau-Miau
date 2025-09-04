@@ -1,0 +1,60 @@
+/*-----------------------------Eliezer Carrasco---------------------------------------*/
+body {
+  font-family: Arial, sans-serif; /* Fuente principal */
+  text-align: center;              /* Centrar texto por defecto */
+  margin: 20px;                    /* Espaciado alrededor de todo el body */
+}
+
+/*Barra de navegación*/
+nav {
+  display: flex;                   /* Uso de Flexbox para organizar enlaces */
+  justify-content: flex-end;       /* Alinear los enlaces a la derecha */
+  gap: 15px;                       /* Espacio entre enlaces */
+}
+
+nav a {
+  text-decoration: none;           /* Quitar subrayado */
+  color: #333;                     /* Color del texto */
+  font-weight: bold;               /* Negrita */
+}
+
+/*  Logo principal*/
+.logo {
+  width: 80px;                     /* Ancho del logo */
+  margin: 10px auto;               /* Centrado horizontal y margen vertical */
+  display: block;                  /* Mostrar como bloque para centrar */
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.5rem;               /* Tamaño grande para título */
+  margin: 20px 0;                  /* Espaciado arriba y abajo */
+}
+
+/* Colores de cada parte del título */
+.guau { color: #ff6600; }          /* Color naranja para "Guau" */
+.miau { color: #0099ff; }          /* Color azul para "Miau" */
+.ampersand { color: #333; }        /* Color gris para "&" */
+
+/* formularios (ventanas emergentes)*/
+.modal {
+  display: none;                    /* Oculto por defecto */
+  position: fixed;                  /* Fijo en toda la pantalla */
+  z-index: 1000;                    /* Por encima de otros elementos */
+  left: 0; top: 0;                  /* Posición superior izquierda */
+  width: 100%; height: 100%;        /* Ocupa toda la pantalla */
+  background: rgba(0,0,0,0.6);     /* Fondo semitransparente */
+  justify-content: center;          /* Centrar contenido horizontalmente (Flex) */
+  align-items: center;              /* Centrar contenido verticalmente */
+}
+
+.modal-content {
+  background: #fff;                 /* Fondo blanco para el contenido */
+  padding: 20px;                    /* Espaciado interno */
+  border-radius: 10px;              /* Bordes redondeados */
+  width: 350px;                     /* Ancho del modal */
+  margin: auto;                     /* Centrado horizontal */
+  position: relative;               /* Para posicionar elementos internos */
+}
+
+/*----------------------------- --------------------------------------*/
