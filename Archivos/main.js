@@ -106,6 +106,37 @@ passwordInput.addEventListener('input', () => {
     : 'bi bi-x-circle-fill';
 });
 
-//------------------------------------------------------------------------------------
+//------------------------------------Mariajose------------------------------------------------
+// Form: Ojo de contraseña (mostrar/ocultar)
+// Input y botón para mostrar/ocultar contraseña principal
+document.getElementById('togglePassword').addEventListener('click', () => {
+  // Cambia el tipo de input entre 'password' y 'text'
+  const type = passwordInput.type === 'password' ? 'text' : 'password';
+  passwordInput.type = type;
+  // Cambia el icono según el estado (ojo abierto/cerrado)
+  document.getElementById('togglePassword').className =
+    type === 'password' ? 'bi bi-eye-slash-fill' : 'bi bi-eye-fill';
+});
+// Input y botón para mostrar/ocultar confirmación de contraseña
+const confirmInput = document.getElementById('confirmPassword');
+document.getElementById('toggleConfirm').addEventListener('click', () => {
+  // Cambia el tipo de input entre 'password' y 'text'
+  const type = confirmInput.type === 'password' ? 'text' : 'password';
+  confirmInput.type = type;
+
+  // Cambia el icono según el estado (ojo abierto/cerrado)
+  document.getElementById('toggleConfirm').className =
+    type === 'password' ? 'bi bi-eye-slash-fill' : 'bi bi-eye-fill';
+});
+// Form: Registro
+// Evento al enviar el formulario de registro
+document.getElementById('formRegistro').addEventListener('submit', function (e) {
+  e.preventDefault(); // Evita el envío tradicional del formulario
+  // Desestructuración de los valores de los inputs: nombre, apellido, email, password y confirmPassword
+  const [nombre, apellido, email, password, confirmPassword] = Array.from(
+    this.elements
+  );
+  // Aquí seguiría la lógica de validación y envío
+});
 
 
