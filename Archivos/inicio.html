@@ -124,4 +124,36 @@
 </div>
 <!----------------------------------------------------------------------------------------------------------------------------------------------------->
 <!----------------------------------------------------------------------------------------------------------------------------------------------------->
-
+<!-- formulario Login: ventana emergente para iniciar sesión MariaJose-->
+<div id="loginModal" class="modal">
+  <!-- Contenido del formulario con estilo de tarjeta -->
+  <div class="modal-content login-card">
+    <!-- Botón para cerrar el formulario -->
+    <a href="#" class="cerrar">&times;</a>
+    <!-- Título del formulario -->
+    <h3>Iniciar Sesión</h3>
+    <!-- Formulario de login -->
+    <form id="formLogin">
+      <!-- Campo de correo electrónico -->
+      <div class="mb-3">
+        <label>Correo electrónico</label>
+        <input type="email" class="form-control" placeholder="usuario@duoc.cl" required>
+      </div>
+      <!-- Campo de contraseña -->
+      <div class="mb-3">
+        <label>Contraseña</label>
+        <input type="password" class="form-control" required>
+      </div>
+      <!-- Botón de enviar formulario -->
+      <button type="submit" class="btn btn-login w-100">Iniciar Sesión</button>
+    </form>
+    <!-- Enlace para abrir formulario de registro si no tiene cuenta -->
+    <p>¿No tienes cuenta? 
+      <a href="#registroModal" class="abrirRegistro">Regístrate</a>
+    </p>
+  </div>
+</div>
+<!-- Script principal del proyecto -->
+<script src="main.js" defer></script>
+</body>
+</html>
