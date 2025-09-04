@@ -1,3 +1,4 @@
+<!---------Eliezer Carrasco>
 <!DOCTYPE html>
 <html lang="es"> <!-- Documento en HTML5, idioma español -->
 <head>
@@ -38,7 +39,7 @@
   <span class="miau">MIAU</span>
 </h1>
 <!----------------------------------------------------------------------------------------------------------------------------------------------------->
-  <!----------------------------------------------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- Descripción  de la tienda MariaJose-->
 <p>Tu tienda favorita para mascotas 🐶🐱</p>
 <!-- Imagen principal de portada -->
@@ -52,5 +53,75 @@
   <p>Hoy queremos invitarte a unirte a nuestra comunidad.<br>
   👉 <a href="#registroModal" class="abrirRegistro"><strong>Regístrate</strong></a> y comienza a disfrutar de una experiencia pensada para ti y tus fieles compañeros.</p>
 </fieldset>
-
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- formulario Registro: ventana emergente para crear una nueva cuenta Eliezer Carrasco-->
+<div id="registroModal" class="modal">
+  <!-- Contenido del modal con estilo de from -->
+  <div class="modal-content registro-card">
+    <!-- Botón para cerrar el modal -->
+    <a href="#" class="cerrar">&times;</a>
+    <!-- Título del modal -->
+    <h3>Regístrate Gratis</h3>
+    <!-- Formulario de registro -->
+    <form id="formRegistro">
+      <!-- Campo de Nombre -->
+      <div class="mb-3">
+        <label>Nombre</label>
+        <input type="text" class="form-control" required>
+      </div>
+      <!-- Campo de Apellido -->
+      <div class="mb-3">
+        <label>Apellido</label>
+        <input type="text" class="form-control" required>
+      </div>
+      <!-- Campo de Correo electrónico -->
+      <div class="mb-3">
+        <label>Correo electrónico</label>
+        <input type="email" class="form-control" placeholder="usuario@duoc.cl" required>
+      </div>
+      <!-- Campo de Contraseña con icono de ojo para mostrar-ocultar -->
+      <div class="mb-3 input-ojito">
+        <label>Contraseña</label>
+        <input type="password" id="passwordRegistro" class="form-control" required>
+        <i class="bi bi-eye-slash-fill" id="togglePassword"></i>
+      </div>
+      <!-- Requisitos de contraseña -->
+      <div class="requisitos" id="requisitosPassword">
+        <div class="requisito" id="reqLength">
+          <i class="bi bi-x-circle-fill"></i>
+          <span>Mínimo 8 caracteres</span>
+        </div>
+        <div class="requisito" id="reqUpper">
+          <i class="bi bi-x-circle-fill"></i>
+          <span>Al menos una letra mayúscula</span>
+        </div>
+        <div class="requisito" id="reqLower">
+          <i class="bi bi-x-circle-fill"></i>
+          <span>Al menos una letra minúscula</span>
+        </div>
+        <div class="requisito" id="reqNumber">
+          <i class="bi bi-x-circle-fill"></i>
+          <span>Al menos un número</span>
+        </div>
+        <div class="requisito" id="reqSpecial">
+          <i class="bi bi-x-circle-fill"></i>
+          <span>Al menos un carácter especial (@#$%&*!?)</span>
+        </div>
+      </div>
+      <!-- Confirmar contraseña con icono de ojo -->
+      <div class="mb-3 input-ojito">
+        <label>Confirmar Contraseña</label>
+        <input type="password" id="confirmPassword" class="form-control" required>
+        <i class="bi bi-eye-slash-fill" id="toggleConfirm"></i>
+      </div>
+      <!-- Botón de enviar formulario -->
+      <button type="submit" class="btn btn-registrar w-100">Registrar</button>
+      <!-- Botón para abrir modal de login desde el registro -->
+      <button type="button" class="btn btn-entrar w-100 mt-2 abrirLogin">Entrar</button>
+    </form>
+  </div>
+</div>
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
 
