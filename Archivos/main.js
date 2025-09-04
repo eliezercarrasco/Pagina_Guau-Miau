@@ -138,5 +138,65 @@ document.getElementById('formRegistro').addEventListener('submit', function (e) 
   );
   // Aquí seguiría la lógica de validación y envío
 });
+// Form: Registro
+// Obtiene los valores de los inputs del formulario de registro
+const [nombre, apellido, email, password, confirmPassword] = Array.from(this.elements)
+  .slice(0, 5)            // Toma solo los primeros 5 elementos (inputs)
+  .map(i => i.value.trim()); // Obtiene su valor y elimina espacios al inicio y fin
+// Expresiones regulares para validar email y contraseña
+const emailRegex = /^[a-zA-Z0-9._%+-]+@duoc\.cl$/;
+const passRegex =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%&*!?]).{8,}$/;
+// Validaciones de registro
+if (!nombre || !apellido || !email || !password || !confirmPassword) {
+  alert('Todos los campos son obligatorios.');
+  return;
+}
+
+if (!emailRegex.test(email)) {
+  alert('Solo se permiten correos con dominio @duoc.cl');
+  return;
+}
+
+if (password !== confirmPassword) {
+  alert('Las contraseñas no coinciden.');
+  return;
+}
+
+if (!passRegex.test(password)) {
+  alert('La contraseña no cumple los requisitos.');
+  return;
+}
+// Registro exitoso (simulado)
+alert('¡Registro exitoso!');
+this.reset();                  // Limpia el formulario
+requisitosDiv.style.display = 'none'; // Oculta los requisitos de contraseña
+cerrarModal('registroModal');  // Cierra el formulario de registro
+// Form: Login
+// Evento al enviar el formulario de login
+document.getElementById('formLogin').addEventListener('submit', function (e) {
+  e.preventDefault(); // Evita el envío tradicional
+  // Obtiene email y contraseña
+  const email = this[0].value.trim();
+  const password = this[1].value.trim();
+  // Valida que el email tenga dominio @duoc.cl
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@duoc\.cl$/;
+  if (!emailRegex.test(email)) {
+    alert('Solo se permiten correos con dominio @duoc.cl');
+    return;
+  }
+  // Valida que la contraseña no esté vacía
+  if (password.length < 1) {
+    alert('Ingresa tu contraseña');
+    return;
+  }
+  // Inicio de sesión exitoso (simulado)
+  alert('Inicio de sesión correcto (simulado).');
+  this.reset();           // Limpia el formulario
+  cerrarModal('loginModal'); // Cierra el formulario de login
+  // Redirecciona a la página de productos
+  window.location.href = 'productos.html';
+});
+
 
 
