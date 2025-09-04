@@ -57,4 +57,65 @@ h1 {
   position: relative;               /* Para posicionar elementos internos */
 }
 
-/*----------------------------- --------------------------------------*/
+/*-------------------------------MaariaJose------------------------------------*/
+
+/*Botón para cerrar modales*/
+.cerrar {
+  position: absolute;       /* Posicionado relativo al modal */
+  top: 10px;                /* Separación superior */
+  right: 15px;              /* Separación derecha */
+  text-decoration: none;    /* Sin subrayado */
+  font-size: 1.5rem;        /* Tamaño del símbolo de cierre */
+  color: #333;              /* Color gris oscuro */
+}
+
+/*Tarjetas de modal (registro y login)*/
+.registro-card, .login-card { 
+  max-width: 400px;         /* Ancho máximo de la tarjeta */
+  margin: auto;             /* Centrado horizontal */
+}
+
+/*Botones */
+.btn-registrar { 
+  background: #28a745;      /* Verde para registrar */
+  color: #fff;              /* Texto blanco */
+}
+.btn-entrar { 
+  background: #007bff;      /* Azul para entrar */
+  color: #fff;              /* Texto blanco */
+}
+.btn-login { 
+  background: #ff6600;      /* Naranja para login */
+  color: #fff;              /* Texto blanco */
+}
+
+/* Ojo de contraseña (mostrar/ocultar) */
+.input-ojito {
+  position: relative;        /* Contenedor relativo para posicionar el icono */
+}
+.input-ojito i {
+  position: absolute;        /* Icono absoluto dentro del input */
+  top: 70%;                  /* Posición vertical */
+  right: 10px;               /* Posición horizontal */
+  cursor: pointer;           /* Aparece el cursor de puntero al pasar sobre él */
+  transform: translateY(-50%); /* Ajusta el centrado vertical */
+}
+
+/*Requisitos de contraseña */
+.requisitos {
+  display: none;             /* Oculto por defecto, se muestra al escribir contraseña */
+  text-align: left;          /* Alineado a la izquierda */
+  font-size: 0.9rem;         /* Tamaño de fuente más pequeño */
+  margin-bottom: 10px;       /* Espaciado inferior */
+}
+
+.requisito {
+  display: flex;             /* Flex para alinear icono y texto */
+  align-items: center;       /* Centrado vertical de icono y texto */
+  gap: 5px;                  /* Espacio entre icono y texto */
+}
+
+/* Estados de los requisitos */
+.requisito.valid { color: green; }
+
+
